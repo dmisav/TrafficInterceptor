@@ -3,13 +3,13 @@
     x:Class="TrafficInterceptor.UI.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:TrafficInterceptor.UI"
+    xmlns:local="clr-namespace:TrafficInterceptor.UI.Views"
     Shell.FlyoutBehavior="Disabled"
     Title="TrafficInterceptor.UI">
 
     <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        ContentTemplate="{DataTemplate local:TrafficCollectionPage}"
+        Route="TrafficCollectionPage" />
 
 </Shell>
