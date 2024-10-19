@@ -2,11 +2,97 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TrafficInterceptor.UI.Views.TrafficCollectionPage"
-             Title="TrafficCollectionPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+             Title="">
+<VerticalStackLayout Padding="20" Spacing="10" HorizontalOptions="FillAndExpand">
+
+        <!-- Welcome Button -->
+        <Button Text="Capture Traffic"
+                BackgroundColor="#5B9BD5"
+                TextColor="White"
+                FontSize="18"
+                CornerRadius="10"
+                HorizontalOptions="Center"
+                Margin="0,0,0,10"/>
+
+        <!-- Capture Header -->
+        <Label Text="Intercept"
+               FontSize="22"
+               FontAttributes="Bold"
+               TextColor="Gray"
+               HorizontalOptions="Start" />
+
+        <!-- Filter Field and Interface Picker -->
+        <Grid ColumnDefinitions="Auto, *, Auto"
+              HorizontalOptions="FillAndExpand"
+              VerticalOptions="Center"
+              Margin="0,10,0,10">
+            
+            <!-- Filter Label -->
+            <Label Grid.Column="0"
+                   Text="using this port/address:"
+                   VerticalOptions="Center"
+                   FontSize="16"
+                   TextColor="Gray"
+                   Margin="0,0,5,0" />
+
+            <!-- Filter Entry -->
+            <Entry Grid.Column="1"
+                   Placeholder="Enter a port"
+                   VerticalOptions="Center"
+                   BackgroundColor="#E1E5EB"
+                   TextColor="Black"
+                   HeightRequest="40"
+                   Margin="5,0"/>
+
+            <!-- Interface Picker -->
+            <Picker Grid.Column="2"
+                    Title="DropDown of interfaces tcp/udp/tls"
+                    BackgroundColor="#E1E5EB"
+                    TextColor="Black"
+                    HeightRequest="40"
+                    VerticalOptions="Center"
+                    Margin="5,0"/>
+        </Grid>
+
+        <!-- Selected Interface Label -->
+        <Label Text="Details"
+               BackgroundColor="#5B9BD5"
+               TextColor="White"
+               FontSize="16"
+               Padding="5"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               Margin="0,10,0,0" />
+
+        <!-- Options Section -->
+        <Label Text="Available Options"
+               FontSize="18"
+               FontAttributes="Bold"
+               TextColor="Gray"
+               HorizontalOptions="Start"
+               Margin="0,30,0,0" />
+
+        <!-- Links -->
+        <HorizontalStackLayout Spacing="10"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"
+                               Margin="0,5,0,0">
+            <Button Text="User's Guide"
+                    BackgroundColor="#E1E5EB"
+                    TextColor="Black" />
+            <Button Text="Save Logs"
+                    BackgroundColor="#E1E5EB"
+                    TextColor="Black" />
+            <Button Text="Open Log Location"
+                    BackgroundColor="#E1E5EB"
+                    TextColor="Black" />
+        </HorizontalStackLayout>
+
+        <!-- Version Info -->
+        <Label Text="Tool Version 1.0.0"
+               FontSize="12"
+               TextColor="Gray"
+               HorizontalOptions="Center"
+               Margin="0,20,0,0"/>
     </VerticalStackLayout>
 </ContentPage>
